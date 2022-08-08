@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  -->
+  <style>
+    #h1-1{
+      /*css注释*/
+      /*id选择器*/
+      color:red;
+    }
+    /*类选择器*/
+    .c1{
+      color:blue;
+    }
+    /*分组选择器*/
+    h3,#h1-1,.c1{
+      background-color: green;
+    }
+    /*  属性选择器*/
+    input[type='text']{
+      color: lightpink;
+    }
+    /*任意元素选择器*/
+    *{
+      /*边框：粗细 样式 颜色*/
+      border: 1px solid red;
+    }
+  </style>
+
+</head>
+<body>
+  <input type="text">
+  <input type="password">
+  <h3>我是新来的</h3>
+  <h1 id="h1-1">电视</h1>
+  <h1 class="c1">冰箱</h1>
+  <h1>洗衣机</h1>
+  <h2>香蕉</h2>
+  <h2 class="c1">苹果</h2>
+  <h2>橘子</h2>
+
+</body>
+</html>

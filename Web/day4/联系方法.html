@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function f1() {
+    console.log("f1");
+  }
+  f1();
+
+  function f2(name,age) {
+    console.log(name+":"+age);
+
+  }
+ f2("张三",22);
+
+  function f3() {
+    return console.log("我是返回值")
+
+  }
+  let info=f3();
+  console.log(info);
+
+  function f4(x,y) {
+    return console.log(x*y);
+
+  }
+  let data=f4(4,5);
+  console.log(data)
+
+  let f5=function (name, age) {
+    console.log(name+":"+age);
+  }
+  f5("王武",33);
+  let f6=new Function("name","age","console.log(name+':'+age)");
+  f6("李四",44);
+</script>
+</body>
+</html>

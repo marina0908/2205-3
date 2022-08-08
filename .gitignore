@@ -1,0 +1,4 @@
+# Project exclude paths
+/jdbc01/target/
+/jdbc02/target/
+/target/

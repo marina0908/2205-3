@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <h1>{{info}}</h1>
+</div>
+<!--从CDN引入VUE框架-->
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+<script>
+  let v=new Vue({
+    el:"body>div",//设置VUE框架的管理范围
+    data:{
+      info:"Hello VUE!"
+    }
+  })
+</script>
+</body>
+</html>

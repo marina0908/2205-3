@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div{
+      color: red;
+    }
+    #d1{
+      /*优先级：范围越小的更优先*/
+      color: pink;
+    }
+    /*important>id>*/
+    span{
+      color: blue !important;
+    }
+    #s1{
+      color: gray;
+    }
+
+  </style>
+</head>
+<body>
+<div id="d1">
+  <p>这是段</p>
+  <span id="s1">这是span</span>
+  <span>这是span2</span>
+  <a href="">超链接</a>
+  <div><p> 这也是p标签</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="text" id="i2">
+<input type="button" value="加" onclick="f(1)">
+<input type="button" value="减" onclick="f(2)">
+<input type="button" value="乘" onclick="f(3)">
+<input type="button" value="除" onclick="f(4)">
+<div></div>
+<script>
+  let d=document.querySelector("#i1");
+  let d2=document.querySelector("#i2");
+  let i=document.querySelector("div");
+  function f(x) {
+      if (isNaN(d.value) || isNaN(d2.value)) {
+          i.innerText = "输入错误";
+          return;
+      }
+      switch (x) {
+          case 1:
+              i.innerText = d.value * 1 + d2.value * 1;
+              break;
+          case 3:
+              i.innerText = d.value * d2.value;
+              break;
+          case 2:
+              i.innerText = (d.value) - (d2.value);
+              break;
+          case 4:
+              i.innerText = (d.value) / (d2.value);
+              break;
+      }
+  }
+</script>
+</body>
+</html>

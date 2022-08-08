@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--无参数，无返回值-->
+  function f1() {
+    console.log("f1");
+  }
+  //调用
+  f1();
+//有参数无返回值
+  function f2(name,age) {
+    console.log(name+":"+age);
+  }
+  f2("张三",20);
+
+  //有返回值，无参数
+  function f3() {
+    return "我是返回值";
+  }
+  let info=f3();
+  console.log(info);
+
+  //有参数，有返回值
+  function f4(x,y) {
+    return x*y;
+  }
+  let result=f4(6,9);
+  console.log(result);
+
+//  第二种方法
+  let f5=function (name,age){
+    console.log(name+":"+age);
+  }
+  f5("李四",23);
+
+  let f6=new Function("name","age","console.log(name+':'+age)");
+  f6("王武",33)
+</script>
+</body>
+</html>

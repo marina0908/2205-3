@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="平方" onclick="f()">
+<div ></div>
+<script>
+  function f(){
+  let d=document.querySelector("div");
+  let v=document.querySelector("input");
+  if (isNaN(i.value())){
+    d.innerText="输入错误";
+    return;
+  }
+  //-*/三种运算都可以直接用
+  //d.innerText=v.value*v.value;
+  //+加法运算,两种写法
+    //d.innerText=v.value*1+v.value*1;
+  d.innerText=parseFloat(v.value)+parseFloat(v.value)
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="添加" onclick="f()">
+<div></div>
+<script>
+  function f(){
+    let i=document.querySelector("input");
+    let d=document.querySelector("div");
+    //创建一个元素对象
+    // let h=document.createElement("h1");
+    给h1设置显示的文本内容
+    // d.innerText=i.value;
+    //把h1添加到div里面
+    // d.append(h);
+
+    //创建图片对象
+    let img=document.createElement("img");
+    //设置图片的src属性
+    img.src="../baidu.png"
+    //把图片添加到页面中
+    d.append(img)
+  }
+</script>
+</body>
+</html>

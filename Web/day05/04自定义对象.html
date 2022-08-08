@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //实力话对象封装数据
+  let p1={
+    name:"张三",salary:3000,job:"销售"
+
+  }
+  console.log(p1.name);
+  console.log(p1.salary);
+  console.log(p1.job);
+
+  let array=[{name:"张三",salary:3000,job:"销售"},
+    {name:"李四",salary:4000,job:"销售"},
+    {name:"王麻子",salary:5000,job:"销售"}]
+
+  for (let p1 of array) {
+    console.log(p1.name+":"+p1.job+":"+p1.salary)
+    let h=document.createElement("h1");
+    h.innerText=p1.name+":"+p1.job+":"+p1.salary;
+    document.body.append(h);
+
+  }
+</script>
+</body>
+</html>

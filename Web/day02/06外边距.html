@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    #d1{
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      margin-left: 100px;
+      margin-right: 100px;;
+      margin-bottom: 100px;
+      margin-top: 100px;
+      /*表示上下，左右*/
+      margin:20px 40px;
+      /*表示顺时针的上右下左*/
+      margin: 20px 30px 40px 50px;
+
+    /*  上下相邻彼此添加外边框，取最大值*/
+    }
+    #d2{
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      margin-left: 100px;
+      margin-right: 100px;;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    #s1{
+      /*行内元素，上下外边距无效*/
+      margin-bottom: 100px;
+      margin-right: 50px;
+    }
+    /*z左右外边框相邻彼此添加外边距，两者相加*/
+    #s2{
+      margin-left: 50px;
+    }
+  </style>
+</head>
+<body>
+<span id="s1">span1</span>
+<span id="s2">span2</span>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>

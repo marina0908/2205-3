@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div>-->
+<!--  <input type="text" v-model="num">-->
+<!--  <input type="text" v-model=""num2>-->
+<!--  <input type="button" value="加" @click="f(1)">-->
+<!--  <input type="button" value="减" @click="f(2)">-->
+<!--  <input type="button" value="乘" @click="f(3)">-->
+<!--  <input type="button" value="除" @click="f(4)">-->
+<!--  <div>{{result}}</div>-->
+<!--</div>-->
+<!--<script src="vue.min.js"></script>-->
+<!--<script>-->
+<!--let v=new Vue({-->
+<!--  el:"body>div",-->
+<!--  data:{-->
+<!--    num:"",-->
+<!--    num2:"",-->
+<!--    result:""-->
+<!--  },-->
+<!--  methods:{-->
+<!--    f(x){-->
+<!--      switch (x){-->
+<!--        case 1:-->
+<!--          v.result=v.num*1+v.num2*1;-->
+<!--         break;-->
+<!--        case 2:-->
+<!--          v.result=v.num-v.num2;-->
+<!--          break;-->
+<!--        case 3:-->
+<!--          v.result=v.num*v.num2;-->
+<!--          break;-->
+<!--        case 4:-->
+<!--          v.result=v.num/v.num2;-->
+<!--          break;-->
+<!--      }-->
+<!--    }-->
+<!--  }-->
+<!--})-->
+<!--</script>-->
+
+<div>
+  <input type="text" v-model="num1">
+  <input type="text" v-model="num2">
+  <input type="button" value="加" @click="f('+')">
+  <input type="button" value="减" @click="f('-')">
+  <input type="button" value="乘" @click="f('*')">
+  <input type="button" value="除" @click="f('/')">
+  <div>{{result}}</div>
+</div>
+
+<script src="vue.min.js"></script>
+
+<script>
+  let v=new Vue({
+    el:"body>div",
+    data:{
+      num1:"",
+      num2:"",
+      result:"",
+    },
+    methods:{
+      f(x) {
+        v.result = eval(v.num1+x+v.num2);
+      }
+      }
+  })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <caption>个人信息</caption>
+  <tr>
+    <td>照片</td>
+    <td><img src="" alt=""></td>
+  </tr>
+  <tr>
+    <td>姓名</td>
+    <td id="nametd"></td>
+  </tr>
+  <tr>
+    <td>年龄</td>
+    <td id="agetd"></td>
+  </tr>
+  <tr>
+    <td>好友</td>
+    <td ><ul></ul></td>
+  </tr>
+</table>
+<input type="button" value="请求数据" onclick="f()">
+<script>
+  function f(){
+    let p={
+      name:"吴磊",url:"wulei2.jpeg",age:"20",friends:["迪丽热巴","赵露思","谭松韵"]
+    }
+
+    nametd.innerText=p.name;
+    agetd.innerText=p.age;
+    let img=document.querySelector("img");
+    img.src=p.url;
+    let ul=document.querySelector("ul");
+    for (let friend of p.friends) {
+      let li=document.createElement("li");
+      li.innerText=friend;
+      ul.append(li);
+    }
+  }
+</script>
+
+</body>
+</html>

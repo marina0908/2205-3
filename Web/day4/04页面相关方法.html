@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>这是div</div>
+<p id="p1">这是p1</p>
+<p id="p2">这是p2</p>
+<input type="text">
+<input type="button" value="按钮" onclick="f()">
+<script>
+  function f(){
+    let d=document.querySelector("div");
+    let i=document.querySelector("input")
+    d.innerText=i.value;
+  }
+</script>
+</body>
+</html>

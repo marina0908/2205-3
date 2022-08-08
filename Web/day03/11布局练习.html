@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body>div{
+            width: 1000px;
+            background-color: #0aa1ed;
+            margin: 0 auto;
+        }
+        #t_div>div,#b_l_div,#b_r_div>div{/*设置统一的背景色*/
+            background-color: #e8e8e8;
+        }
+        #t_l_div{/*左上div*/
+            width: 611px;
+            height: 376px;
+            float: left;
+        }
+        #t_r_div{/*右上div*/
+            width: 375px;
+            height: 376px;
+            float: right;
+        }
+        body>div>div{
+            /*解决子元素全部浮动时高度为0 的问题*/
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        #b_l_div{
+            width: 366px;
+            height: 233px;
+            float: left;
+        }
+        #b_r_div{
+            float: right;
+        }
+        #b_r_div>div{
+            width: 198px;
+            height: 233px;
+            float: left;
+            margin-left: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div>
+    <div id="t_div">
+        <div id="t_l_div"></div>
+        <div id="t_r_div"></div>
+    </div>
+    <div id="b_div">
+        <div id="b_l_div"></div>
+        <div id="b_r_div">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

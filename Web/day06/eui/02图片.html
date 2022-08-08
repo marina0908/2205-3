@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.9/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+  <div class="demo-image">
+    <div class="block" v-for="fit in fits" >
+      <span class="demonstration">{{ fit }}</span>
+      <el-image
+              style="width: 100px; height: 100px"
+              :src="url"
+              :fit="fit"></el-image>
+    </div>
+  </div>
+<h1>自定义效果，填充，原始宽高比</h1>
+  <el-image
+          style="width: 100px; height: 100px"
+          src="../wulei2.jpeg"
+          fit="contain"></el-image>
+
+  <h1>填充，保证宽高比例</h1>
+  <el-image
+          style="width: 100px; height: 100px"
+          src="../wulei2.jpeg"
+          fit="cover"></el-image>
+  <h1>填充，完整显示</h1>
+  <el-image
+          style="width: 100px; height: 100px"
+          src="../wulei2.jpeg"
+          fit="fill"></el-image>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://cdn.staticfile.org/element-ui/2.15.9/index.min.js"></script>
+<script>
+  let v = new Vue({
+    el: '#app',
+    data: function() {
+      return {fits: ['fill', 'contain', 'cover', 'none', 'scale-down'],
+        url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
+      }
+    },
+  })
+</script>
+</html>

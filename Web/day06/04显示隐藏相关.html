@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<!--  v-if 布尔变量值，true显示元素，false不显示元素-->
+<!--  v-if是删掉，v-show是隐藏元素，频繁切换显示状态时使用-->
+  <h1 v-if="isShow">张学友</h1>
+  <h1 v-else>刘德华</h1>
+  <h1 v-show="isShow">郭富城</h1>
+</div>
+<script src="vue.min.js"></script>
+<script>
+  let v=new Vue({
+    el:"body>div",
+    data:{
+      isShow:true
+    }
+
+  })
+</script>
+</body>
+</html>

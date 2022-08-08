@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<!--  <h1 v-text="mag"></h1>-->
+<!--  <h1 v-html="mag"></h1>-->
+  <input type="text" v-model="info">
+  <input type="button" value="按钮" @click="f()">
+<!--  <a :href="url">超链接</a>-->
+
+
+</div>
+<script src="vue.min.js"></script>
+<script>
+  let v=new Vue({
+    el:"body>div",
+    data:{
+      info:"",
+      // mag:"文本<b>加粗</b>",
+      // url:"http://www.baidu.com"
+    },
+    methods:{
+      f(){
+        alert(v.info);
+      }
+    }
+
+  })
+</script>
+</body>
+</html>

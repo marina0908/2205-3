@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<!--  v-model双向绑定，变量url的值会影响文本框的内容，文本框内容改变也会影响url变量的值-->
+  <p>{{url}}</p>
+  <input type="text" v-model="url" placeholder="请输入访问的地址">
+  <a :href="url">超链接</a>
+</div>
+<script src="vue.min.js"></script>
+<script>
+  let v=new Vue({
+    el:"body>div",
+    data:{
+      url:"http://www.baidu.com"
+    }
+  })
+</script>
+</body>
+</html>

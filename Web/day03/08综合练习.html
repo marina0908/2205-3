@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font: 12px "simhei", Arial, Helvetica, sans-serif;
+            color: #666;
+        }
+        body>div{
+            width: 1000px;
+            background-color: #0aa1ed;
+            overflow: hidden;/*解决高度为0 的问题*/
+            /*外边距左右自动是让块级元素在当前行内居中*/
+            margin: 0 auto;
+            text-align: center;/*让里面的所有子元素全部内容居中*/
+        }
+        div>div{
+            width: 250px;
+            float: left; /*让纵向排列改成横向排列*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <img src="http://doc.canglaoshi.org/tstore_v1/images/footer/icon1.png" alt="">
+        <p>品质保障</p>
+    </div>
+    <div>
+        <img src="http://doc.canglaoshi.org/tstore_v1/images/footer/icon2.png" alt="">
+        <p>私人订制</p>
+    </div>
+    <div>
+        <img src="http://doc.canglaoshi.org/tstore_v1/images/footer/icon3.png" alt="">
+        <p>学员特供</p>
+    </div>
+    <div>
+        <img src="http://doc.canglaoshi.org/tstore_v1/images/footer/icon4.png" alt="">
+        <p>专属特权</p>
+    </div>
+</div>
+</body>
+</html>

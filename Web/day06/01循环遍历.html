@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>·</title>
+</head>
+<body>
+<div>
+  <ul>
+    <li v-for="name in arr">{{name}}</li>
+
+  </ul>
+    <ol>
+        <hr>
+        <li v-for="p in persons">
+            <p>名字：{{p.name}}</p>
+            <p>类型：{{p.type}}</p>
+            <p>年龄：{{p.age}}</p>
+        </li>
+        <hr>
+    </ol>
+    <table border="1">
+        <caption>人物列表</caption>
+        <tr >
+            <th>编号</th>
+            <th>名字</th>
+            <th>类型</th>
+            <th>年龄</th>
+        </tr>
+        <tr v-for="(p,i) in persons">
+            <td>{{i+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.type}}</td>
+            <td>{{p.age}}</td>
+        </tr>
+
+    </table>
+</div>
+<script src="vue.min.js"></script>
+<script>
+  let v=new Vue({
+    el:"body>div",
+    data:{
+      arr:["zhangsan","lisi","wangwu"],
+        persons:[{name:"刘备",type:"战士",age:30},{name:"黄忠",type:"射手",age:50},{name:"赵云",type:"战士",age:25}]
+    }
+  })
+</script>
+</body>
+</html>

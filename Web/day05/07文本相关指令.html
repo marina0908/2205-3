@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<!--  {{变量}}，插值：让当前未知的文本内容和变量进行绑定-->
+  {{msg}}
+  <h1>{{msg}}</h1>
+<!--  v-text="变量-，让元素的文本内容和变量进行绑定-->
+
+  <h1 v-text="msg"></h1>
+  <p v-text="msg"></p>
+  //v-html让元素的标签内容与之绑定，会解析标签
+  <p v-html="msg"></p>
+</div>
+<script src="vue.min.js"></script>
+<script>
+  let v=new Vue({
+    el:"body>div",
+      data:{
+        msg:"文本相关<b>加粗</b>"
+    }
+  })
+</script>
+</body>
+</html>
